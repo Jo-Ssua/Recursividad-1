@@ -108,6 +108,39 @@ public class ReverseString {
 
     }
 
+    public String cambio(int m, int counter){
+        int temp = m;
+
+        if(temp < 50){
+            return  "";
+        }
+
+        int[] money = {100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50};
+
+
+        if(m >= money[counter]){
+            temp = m - money[counter];
+
+
+            return money[counter] + " "+ cambio(temp,counter);
+
+        }else{
+
+            return cambio(temp,counter+1);
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+
+
     
 
 
